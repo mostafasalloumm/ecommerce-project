@@ -15,7 +15,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::latest()->paginate(5);
+        $products = Product::latest()->paginate(100);
         // Log::info("the message for log");
         // error_log('Some message here.');
                 return $products;
