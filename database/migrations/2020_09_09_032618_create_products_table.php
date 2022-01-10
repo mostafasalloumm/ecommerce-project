@@ -20,6 +20,8 @@ class CreateProductsTable extends Migration
             $table->string('sizes');
             $table->string('colors');
             $table->string('detail');
+            $table->string('imgurl');
+            $table->string('category');
             $table->timestamps();
         });
     }
