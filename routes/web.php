@@ -19,4 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('products', ProductController::class);
+Route::middleware(['cors'])->group(function () {
+    Route::resource('products', ProductController::class);
+});

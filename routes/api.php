@@ -18,4 +18,7 @@ use App\Http\Controllers\ProductController;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::resource('products', ProductController::class);
+// Route::resource('products', ProductController::class);
+Route::middleware(['cors'])->group(function () {
+    Route::resource('products', ProductController::class);
+});
