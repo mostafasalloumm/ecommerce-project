@@ -22,3 +22,6 @@ Route::get('/', function () {
 Route::middleware(['cors'])->group(function () {
     Route::resource('products', ProductController::class);
 });
+Route::middleware(['cors'])->group(function () {
+    Route::resource('orders', OrderController::class);
+});
